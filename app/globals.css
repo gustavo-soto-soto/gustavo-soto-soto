@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: Grandstander;
+    src: url("/fonts/Grandstander/Grandstander-Regular.ttf");
+}
+
+* {
+    font-family: Grandstander;
+}
+
+body {
+    background-image: linear-gradient(to right top, #27272a, #242427, #212124, #1f1f22, #1c1c1f, #2a2a2d, #39393c, #49494c, #737375, #9f9fa1, #cececf, #ffffff);
+}
+
+.profile-photo {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.right-point {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+@keyframes moveAndRotate {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(20px, 20px) rotate(180deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+.soft-skills-container {
+    background-image: linear-gradient(to left top, #31c892, #00aca0, #008f9d, #267089, #3d5469, #3c4756, #373a44, #2f2f32, #2a2a2d, #262629, #212124, #1d1d20);
+}
+
+.contact-container {
+    background-image: linear-gradient(to right top, #27c295, #00a79e, #008b9a, #1f6f87, #37546a, #394759, #363b48, #303037, #2d2d33, #29292e, #26262a, #232326);
+}
