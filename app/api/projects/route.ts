@@ -20,12 +20,14 @@ export async function GET() {
     const database = client.db("Portfolio");
     const collection = database.collection("projects");
 
-    const projects = await collection.find({}).toArray();
-
+    const projects = await collection.find({}).sort({ createdAt: -1 }).toArray(); //sort by date newer
+    
     return NextResponse.json({ projects });
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error });
+  } finally{
+    await client.close()
   }
 }
 
@@ -48,5 +50,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error });
+  } finally{
+    await client.close()
   }
 }

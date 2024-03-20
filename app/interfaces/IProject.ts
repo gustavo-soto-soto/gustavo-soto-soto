@@ -4,5 +4,6 @@ export interface Iproject {
     name: string,
     description: string,
     homepage: string,
-    thumbnail?: string //WEBP PREVIEW IMAGE
+    createdAt?: number, // created date in timestamp
+    thumbnail?: string //webp preview image
 }

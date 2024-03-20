@@ -33,7 +33,7 @@ const getRepositories = async() => {
   try {
     const response = await fetch(`${process.env.SERVER_URL}/api/projects`, { method: "GET" }) //OPTION 1 MONGODB
     const { projects } = await response.json()
-    projects.forEach( (project: Iproject) => project._id = project.id)
+    projects.forEach( (project: Iproject) => project.id = project._id)
     return projects
   } catch (error) {
     console.error(error)
@@ -91,7 +91,7 @@ export default async function Home() {
                 <div className="max-sm:w-[90%]">
                   <Link className="text-lg text-slate-300 hover:text-emerald-400 transition-all max-sm:text-xs"
                     href={"https://linkedin.com/in/gustavo-soto-soto"} passHref target="_blank" >
-                    wwww.linkedin.com/in/gustavo-soto-soto
+                    www.linkedin.com/in/gustavo-soto-soto
                   </Link>
                 </div>
               </div>
@@ -140,8 +140,8 @@ export default async function Home() {
         <div className="w-2/4 h-[400px] flex flex-col justify-center items-center gap-5 p-5 bg-zinc-800 bg-opacity-60 rounded-md shadow-md
          max-sm:w-full max-sm:h-auto max-sm:p-2 max-sm:m-auto">
           <ul className="w-full grid grid-cols-3 list-none gap-2 justify-center items-center max-sm:grid-cols-2">
-            {skills.map( (skill, key) => 
-              <li key={key} className="flex flex-col pl-5 max-sm:p-0">
+            {skills.map( skill => 
+              <li key={skill.name} className="flex flex-col pl-5 max-sm:p-0">
                 <div className="flex justify-start items-center gap-2 p-2">
                   <div className="w-10 h-10 hover:-rotate-180 transition-all cursor-pointer">{skill.icon}</div>
                   <span className="text-lg text-start text-slate-300">{skill.name}</span>
