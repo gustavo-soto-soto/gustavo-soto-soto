@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {BiLogoHtml5, BiLogoCss3, BiLogoJavascript, BiLogoTypescript, BiLogoReact, BiLogoNodejs, BiLogoMongodb, BiLogoGit, BiLogoTailwindCss, BiLogoVuejs, BiLogoBootstrap} from 'react-icons/bi';
+import {BiLogoHtml5, BiLogoCss3, BiLogoJavascript, BiLogoTypescript, BiLogoReact, BiLogoNodejs, BiLogoMongodb, BiLogoGit, BiLogoTailwindCss, BiLogoVuejs, BiLogoAws, BiLogoFlask, BiLogoPython, BiLogoBootstrap} from 'react-icons/bi';
 import  { TbBrandNextjs, TbSettingsCode, TbBrandVite } from 'react-icons/tb';
 import { MdEmail } from "react-icons/md";
 import { SiExpress, SiLinkedin } from 'react-icons/si';
@@ -15,16 +15,19 @@ const skills = [
   {name: "JavaScript", icon: <BiLogoJavascript style={iconStyle}/>},
   {name: "TypeScript", icon: <BiLogoTypescript style={iconStyle}/>},
   {name: "React", icon: <BiLogoReact style={ iconStyle }/> },
-  {name: "Vue", icon: <BiLogoVuejs style={ iconStyle }/> },
   {name: "NextJS", icon: <TbBrandNextjs style={ iconStyle }/>},
   {name: "NodeJS", icon: <BiLogoNodejs style={ iconStyle }/>},
   {name: "MongoDB", icon: <BiLogoMongodb style={ iconStyle }/>},
+  {name: "ExpressJS", icon: <SiExpress style={ iconStyle }/>},
+  {name: "Python", icon: <BiLogoPython style={ iconStyle }/> },
+  {name: "Flask", icon: <BiLogoFlask style={ iconStyle }/> },
+  {name: "Vue", icon: <BiLogoVuejs style={ iconStyle }/>},
   {name: "ViteJS", icon: <TbBrandVite style={ iconStyle }/>},
   {name: "Tailwindcss", icon: <BiLogoTailwindCss style={ iconStyle }/>},
   {name: "Bootstrap", icon: <BiLogoBootstrap style={ iconStyle }/>},
-  {name: "ExpressJS", icon: <SiExpress style={ iconStyle }/>},
   {name: "GIT", icon: <BiLogoGit style={ iconStyle }/>},
-  {name: "API", icon: <TbSettingsCode style={ iconStyle }/> },
+  {name: "AWS", icon: <BiLogoAws style={ iconStyle }/> },
+  {name: "API Management", icon: <TbSettingsCode style={ iconStyle }/>},
 ]
 
 const softSkills = ["Creativity", "Perseverance", "Self-motivation", "Commitment", "Empathy", "Critical thinking", "Transparency", "Resilience", "Communication"]
@@ -155,7 +158,7 @@ export default async function Home() {
           <div className="w-full h-full relative flex flex-col gap-5 max-sm:p-5">
             {/* <Image src={"/images/trumphet.jpg"} alt="creativity-image" fill className="rounded-md"/> */}
             <div className="w-full h-20 flex flex-col justify-center items-center max-sm:h-auto max-sm:gap-3">
-              <h1 className="text-2xl text-slate-300">+2 years of experience in software development</h1>
+              <h1 className="text-2xl text-slate-300">+3 years of experience in software development</h1>
               <p className="text-slate-400 tracking-wide">Quick adaptation and continuous learning to achieve results with: </p>
             </div>
             <ul className="w-full grid grid-cols-3 list-disc gap-5 max-sm:grid-cols-2">
