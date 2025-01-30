@@ -14,14 +14,6 @@ body {
     background-image: linear-gradient(to right top, #27272a, #242427, #212124, #1f1f22, #1c1c1f, #2a2a2d, #39393c, #49494c, #737375, #9f9fa1, #cececf, #ffffff);
 }
 
-.profile-photo {
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-}
-
-.right-point {
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-}
-
 @keyframes moveAndRotate {
     0% {
         transform: translate(0, 0) rotate(0deg);

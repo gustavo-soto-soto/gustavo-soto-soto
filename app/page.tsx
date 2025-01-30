@@ -1,8 +1,10 @@
 import Image from "next/image";
-import {BiLogoHtml5, BiLogoCss3, BiLogoJavascript, BiLogoTypescript, BiLogoReact, BiLogoNodejs, BiLogoMongodb, BiLogoGit, BiLogoTailwindCss, BiLogoVuejs, BiLogoAws, BiLogoFlask, BiLogoPython, BiLogoBootstrap} from 'react-icons/bi';
+import {BiLogoHtml5, BiLogoCss3, BiLogoJavascript, BiLogoTypescript, BiLogoReact, BiLogoNodejs, BiLogoMongodb, BiLogoGit, BiLogoTailwindCss, BiLogoVuejs, BiLogoAws, BiLogoFlask, BiLogoPython, BiLogoBootstrap, BiLogoDocker} from 'react-icons/bi';
 import  { TbBrandNextjs, TbSettingsCode, TbBrandVite } from 'react-icons/tb';
 import { MdEmail } from "react-icons/md";
 import { SiExpress, SiLinkedin } from 'react-icons/si';
+import { DiScrum } from "react-icons/di";
+import { GiArtificialIntelligence } from "react-icons/gi";
 import Link from "next/link";
 import { Iproject } from "./interfaces/IProject";
 import Header from "./components/Header";
@@ -25,12 +27,30 @@ const skills = [
   {name: "ViteJS", icon: <TbBrandVite style={ iconStyle }/>},
   {name: "Tailwindcss", icon: <BiLogoTailwindCss style={ iconStyle }/>},
   {name: "Bootstrap", icon: <BiLogoBootstrap style={ iconStyle }/>},
+  {name: "RESTful APIs", icon: <TbSettingsCode style={ iconStyle }/>},
   {name: "GIT", icon: <BiLogoGit style={ iconStyle }/>},
   {name: "AWS", icon: <BiLogoAws style={ iconStyle }/> },
-  {name: "API Management", icon: <TbSettingsCode style={ iconStyle }/>},
+  {name: "Scrum", icon: <DiScrum style={ iconStyle }/>},
+  {name: "AI Models Training", icon: <GiArtificialIntelligence style={ iconStyle }/>},
+  {name: "Docker", icon: <BiLogoDocker style={ iconStyle }/>},
+
 ]
 
-const softSkills = ["Creativity", "Perseverance", "Self-motivation", "Commitment", "Empathy", "Critical thinking", "Transparency", "Resilience", "Communication"]
+const softSkills = [
+  "Communication",
+  "Critical thinking",
+  "Empathy",
+  "Adaptability",
+  "Self-motivation",
+  "Perseverance",
+  "Teamwork",
+  "Commitment",
+  "Goal-Oriented",
+  "Creativity",
+  "Transparency",
+  "Conflict Resolution"
+];
+
 
 const getRepositories = async() => {
   try {
@@ -70,10 +90,10 @@ export default async function Home() {
       <Header/>
       <div className="w-full h-[600px] flex justify-center items-center gap-10 relative z-40 max-sm:my-12" id="resume">
         <div className="w-2/4 h-[450px] p-5 flex flex-col gap-4 rounded-lg border-zinc-700 bg-zinc-800 bg-opacity-70 relative max-sm:w-5/6 max-sm:h-auto">
-          <Image width={170} height={170} src={"/images/me.png"} alt="profile-photo" className="p-1 absolute top-0 right-0 rounded-3xl drop-shadow-2xl
-           max-sm:w-20 max-sm:h-20"/>
+          <Image width={200} height={200} src={"/images/me.jpg"} alt="profile-photo" className="p-1 absolute top-0 right-2 rounded-full drop-shadow-2xl
+           max-sm:w-28 max-sm:h-28 max-xl:w-28 max-xl:h-28 max-sm:right-0"/>
           <h1 className="text-5xl text-slate-300">HELLO!</h1>
-          <h2 className="text-3xl text-slate-300">I AM GUSTAVO SOTO SOTO</h2>
+          <h2 className="text-3xl text-slate-300 max-sm:text-base">I AM GUSTAVO SOTO SOTO</h2>
           <h3 className="text-2xl text-slate-300">FRONT END DEVELOPER</h3>
           <p className="text-lg text-slate-300 text-justify font-light">Web developer with the ambition to be a better professional every day. <br/> I set my goals and work hard to achieve them. I like challenges that can be solved with technology, because the limit is in your mind! .</p>
           <hr className="border-t border-slate-200"/>
@@ -140,7 +160,7 @@ export default async function Home() {
         <legend className="m-auto text-slate-300 text-5xl mb-5 bg-[#1F1F22] bg-opacity-40 max-sm:text-center max-sm:m-0">
           SKILLS
         </legend>
-        <div className="w-2/4 h-[400px] flex flex-col justify-center items-center gap-5 p-5 bg-zinc-800 bg-opacity-60 rounded-md shadow-md
+        <div className="w-2/4 h-[450px] flex flex-col justify-center items-center gap-5 p-5 bg-zinc-800 bg-opacity-60 rounded-md shadow-md
          max-sm:w-full max-sm:h-auto max-sm:p-2 max-sm:m-auto">
           <ul className="w-full grid grid-cols-3 list-none gap-2 justify-center items-center max-sm:grid-cols-2">
             {skills.map( skill => 
@@ -154,7 +174,7 @@ export default async function Home() {
           </ul>
         </div>
         
-        <div className="w-2/4 h-[400px] flex flex-col justify-center items-center gap-5 relative bg-zinc-800 p-5 bg-opacity-70 rounded-md shadow-md max-sm:w-full max-sm:h-auto max-sm:p-2 max-sm:m-auto">
+        <div className="w-2/4 h-[450px] flex flex-col justify-center items-center gap-5 relative bg-zinc-800 p-5 bg-opacity-70 rounded-md shadow-md max-sm:w-full max-sm:h-auto max-sm:p-2 max-sm:m-auto">
           <div className="w-full h-full relative flex flex-col gap-5 max-sm:p-5">
             {/* <Image src={"/images/trumphet.jpg"} alt="creativity-image" fill className="rounded-md"/> */}
             <div className="w-full h-20 flex flex-col justify-center items-center max-sm:h-auto max-sm:gap-3">
