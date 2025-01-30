@@ -91,7 +91,7 @@ export default async function Home() {
       <div className="w-full h-[600px] flex justify-center items-center gap-10 relative z-40 max-sm:my-12" id="resume">
         <div className="w-2/4 h-[450px] p-5 flex flex-col gap-4 rounded-lg border-zinc-700 bg-zinc-800 bg-opacity-70 relative max-sm:w-5/6 max-sm:h-auto">
           <Image width={200} height={200} src={"/images/me.jpg"} alt="profile-photo" className="p-1 absolute top-0 right-2 rounded-full drop-shadow-2xl
-           max-sm:w-28 max-sm:h-28 max-xl:w-28 max-xl:h-28 max-sm:right-0"/>
+           max-sm:w-28 max-sm:h-28 max-xl:w-28 max-xl:h-28 max-sm:right-0 bg-transparent"/>
           <h1 className="text-5xl text-slate-300">HELLO!</h1>
           <h2 className="text-3xl text-slate-300 max-sm:text-base">I AM GUSTAVO SOTO SOTO</h2>
           <h3 className="text-2xl text-slate-300">FRONT END DEVELOPER</h3>
